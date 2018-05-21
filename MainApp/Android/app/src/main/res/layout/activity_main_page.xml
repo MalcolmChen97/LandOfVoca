@@ -20,4 +20,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.717" />
+
+    <Spinner
+        android:id="@+id/bookchooser"
+        android:layout_width="277dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="146dp"
+        android:layout_marginTop="171dp"
+        app:layout_constraintBottom_toTopOf="@+id/MainPage_Start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
 </android.support.constraint.ConstraintLayout>
