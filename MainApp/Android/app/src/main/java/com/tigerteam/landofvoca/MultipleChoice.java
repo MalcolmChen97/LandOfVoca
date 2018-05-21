@@ -8,12 +8,18 @@ import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.Charset;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -23,20 +29,55 @@ public class MultipleChoice extends AppCompatActivity {
     private Book book = Book.getInstance();
     private String problem;
     private String answer;
+    private String bookname;
+    private List<Word> mybook= new ArrayList<>();
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_multiple_choice);
+        Intent in= getIntent();
+        bookname = in.getStringExtra("book");
+        initilizeBook();
 
         declareBtn();
         setUpbtn();
-        update();
+//        update();
 
 
     }
 
+    private void initilizeBook(){
+        int id;
+        switch (bookname){
+            case "toefl":
+                id = R.raw.toefl;
+                break;
+            case "gre":
+                id = R.raw.gre;
+                break;
+            default:
+                id = R.raw.test;
+                break;
+        }
+        InputStream is = getResources().openRawResource(id);
+        BufferedReader reader = new BufferedReader((new InputStreamReader(is, Charset.forName("UTF-8"))));
+        String line = "";
+        try{
+            while((line = reader.readLine()) != null){
+                String[] tokens = line.split(",");
+                Word newword = new Word();
+                newword.setEnglish(tokens[0]);
+                newword.setChinese_meaning(tokens[1]);
+                mybook.add(newword);
+                Log.d("word",newword.getEnglish());
+            }
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 
     private void declareBtn(){
         numOfChoice = getResources().getInteger(R.integer.num_Of_Choices);
@@ -97,10 +138,10 @@ public class MultipleChoice extends AppCompatActivity {
 
         //select random voca
         Random rand = new Random();
-        int randomVoca = rand.nextInt(book.getSize());
+        int randomVoca = rand.nextInt(mybook.size());
 
-        problem = book.getEnglish().get(randomVoca);
-        answer = book.getChinese().get(randomVoca);
+        problem = mybook.get(randomVoca).getEnglish();
+        answer = mybook.get(randomVoca).getChinese_meaning();
 
         //set question
         TextView question = (TextView)findViewById(R.id.MultipleChoice_Question);
@@ -121,11 +162,11 @@ public class MultipleChoice extends AppCompatActivity {
             while(!find && answerIndex != i){
 
                 Random rand = new Random();
-                int randomVoca = rand.nextInt(book.getSize());
+                int randomVoca = rand.nextInt(mybook.size());
 
-                if(checkNoSame(book.getChinese().get(randomVoca))){
+                if(checkNoSame(mybook.get(randomVoca).getChinese_meaning())){
                     find = true;
-                    CHOICE[i].setText(book.getChinese().get(randomVoca));
+                    CHOICE[i].setText(mybook.get(randomVoca).getChinese_meaning());
                 }
             }
         }
@@ -169,6 +210,8 @@ public class MultipleChoice extends AppCompatActivity {
                 CHOICE[i].setBackgroundTintList(ColorStateList.valueOf(Color.argb(200,0,255,127)));
         }
     }
+
+
     public static Intent makeIntent(Context context){
         return new Intent(context,MultipleChoice.class);
     }

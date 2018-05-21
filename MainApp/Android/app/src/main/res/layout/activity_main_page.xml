@@ -25,7 +25,7 @@
         android:id="@+id/bookchooser"
         android:layout_width="277dp"
         android:layout_height="52dp"
-        android:layout_marginBottom="146dp"
+        android:layout_marginBottom="80dp"
         android:layout_marginTop="171dp"
         app:layout_constraintBottom_toTopOf="@+id/MainPage_Start"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,5 +33,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="216dp"
+        android:layout_height="82dp"
+        android:layout_marginBottom="46dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="109dp"
+        android:autoSizeTextType="uniform"
+        android:autoText="false"
+        android:text="Land Of Voca"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/bookchooser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

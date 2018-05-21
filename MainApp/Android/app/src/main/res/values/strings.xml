@@ -4,8 +4,9 @@
     <string name="start">Start</string>
     <integer name="num_Of_Choices">4</integer>
     <string-array name="books">
-        <item>TOEFL</item>
-        <item>GRE</item>
+        <item>toefl</item>
+        <item>gre</item>
+        <item>test</item>
     </string-array>
 
 </resources>

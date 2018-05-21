@@ -8,6 +8,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -17,6 +18,10 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,14 +29,18 @@ public class MainPage extends AppCompatActivity implements AdapterView.OnItemSel
 
     private Book book = Book.getInstance();
     private String bookname;
+    private List<Word> mybook= new ArrayList<>();
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
         setUpspinner();
         setUpbtn();
-        initilizeBook();
+        //initilizeBook();
     }
+
 
     private void setUpspinner(){
         Spinner bookchooser = (Spinner) findViewById(R.id.bookchooser);
@@ -47,6 +56,7 @@ public class MainPage extends AppCompatActivity implements AdapterView.OnItemSel
             @Override
             public void onClick(View v) {
                 Intent intent = MultipleChoice.makeIntent(MainPage.this);
+                intent.putExtra("book",bookname);
                 startActivity(intent);
             }
         });
@@ -57,23 +67,23 @@ public class MainPage extends AppCompatActivity implements AdapterView.OnItemSel
 //        book.setChinese(getPreferenceForVocabularyBook(this,"testchi",book.getSize()));
 //        Toast.makeText(this,book.getChinese().get(0)+book.getChinese().get(1)+book.getChinese().get(2)+book.getChinese().get(3),Toast.LENGTH_LONG).show();
 //    }
-    private void initilizeBook(){
-        List<String> eng = new ArrayList<>();
-        eng.add("apple");
-        eng.add("banana");
-        eng.add("nut");
-        eng.add("coconut");
-
-        List<String> chi = new ArrayList<>();
-        chi.add("苹果");
-        chi.add("香蕉");
-        chi.add("花生");
-        chi.add("椰子");
-
-        saveVocaNum(this,"test",4);
-        savePreferenceForVocabularyBook(this,"testeng",eng);
-        savePreferenceForVocabularyBook(this,"testchi",chi);
-    }
+//    private void initilizeBook(){
+//        List<String> eng = new ArrayList<>();
+//        eng.add("apple");
+//        eng.add("banana");
+//        eng.add("nut");
+//        eng.add("coconut");
+//
+//        List<String> chi = new ArrayList<>();
+//        chi.add("苹果");
+//        chi.add("香蕉");
+//        chi.add("花生");
+//        chi.add("椰子");
+//
+//        saveVocaNum(this,"test",4);
+//        savePreferenceForVocabularyBook(this,"testeng",eng);
+//        savePreferenceForVocabularyBook(this,"testchi",chi);
+//    }
 
 
     public static void saveVocaNum(Context context,String book, int size){
