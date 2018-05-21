@@ -7,7 +7,7 @@ package com.tigerteam.landofvoca;
 public class Word {
     private String chinese_meaning;
     private String english;
-
+    //hehe
     public String getChinese_meaning() {
         return chinese_meaning;
     }
