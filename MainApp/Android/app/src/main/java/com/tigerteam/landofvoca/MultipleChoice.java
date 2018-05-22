@@ -43,7 +43,7 @@ public class MultipleChoice extends AppCompatActivity {
 
         declareBtn();
         setUpbtn();
-//        update();
+        update();
 
 
     }
