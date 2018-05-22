@@ -1,4 +1,4 @@
-package com.tigerteam.landofvoca;
+cspackage com.tigerteam.landofvoca;
 
 import android.content.Context;
 import android.content.Intent;
@@ -43,7 +43,7 @@ public class MultipleChoice extends AppCompatActivity {
 
         declareBtn();
         setUpbtn();
-//        update();
+        update();
 
 
     }
