@@ -31,7 +31,7 @@ public class MultipleChoice extends AppCompatActivity {
     private String answer;
     private String bookname;
     private List<Word> mybook= new ArrayList<>();
-
+    private Word current_word;
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -116,6 +116,8 @@ public class MultipleChoice extends AppCompatActivity {
                     else{
                         showResult();
                         niceTryAnnounce();
+                        Book.addword(current_word);
+                        Log.i("add","dsa");
                     }
                     next.setVisibility(View.VISIBLE);
                 }
@@ -142,7 +144,7 @@ public class MultipleChoice extends AppCompatActivity {
 
         problem = mybook.get(randomVoca).getEnglish();
         answer = mybook.get(randomVoca).getChinese_meaning();
-
+        current_word = mybook.get(randomVoca);
         //set question
         TextView question = (TextView)findViewById(R.id.MultipleChoice_Question);
         question.setText(problem);

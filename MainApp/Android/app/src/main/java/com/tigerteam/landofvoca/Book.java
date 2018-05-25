@@ -1,17 +1,16 @@
 package com.tigerteam.landofvoca;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by Jonathan Chen on 2018/5/17.
  */
-
+//this is now the memo book!
 public class Book {
 
 
-    private List<String> english;
-    private List<String> chinese;
-    private int size;
+    private List<Word> mymemo=new ArrayList<>();
 
     private static Book instance;
     public static Book getInstance(){
@@ -21,29 +20,18 @@ public class Book {
         return instance;
     }
 
-
-
-    public List<String> getEnglish() {
-        return english;
+    public List<Word> getmemo(){
+        return mymemo;
     }
 
-    public void setEnglish(List<String> english) {
-        this.english = english;
+    public static void addword(Word aword){
+        getInstance().getmemo().add(aword);
     }
 
-    public List<String> getChinese() {
-        return chinese;
+    public static void remove(Word aword){
+        getInstance().getmemo().remove(aword);
     }
 
-    public void setChinese(List<String> chinese) {
-        this.chinese = chinese;
-    }
 
-    public int getSize() {
-        return size;
-    }
 
-    public void setSize(int size) {
-        this.size = size;
-    }
 }
