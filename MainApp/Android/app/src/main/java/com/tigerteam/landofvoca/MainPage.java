@@ -51,7 +51,15 @@ public class MainPage extends AppCompatActivity implements AdapterView.OnItemSel
     }
 
     private void setUpbtn(){
-        Button start = (Button)findViewById(R.id.MainPage_Start);
+        final Button start = (Button)findViewById(R.id.MainPage_Start);
+        Button entermemo = (Button) findViewById(R.id.memobut);
+        entermemo.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainPage.this,Memo.class);
+                startActivity(intent);
+            }
+        });
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
