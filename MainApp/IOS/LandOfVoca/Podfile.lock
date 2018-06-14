@@ -1,0 +1,20 @@
+PODS:
+  - AWSCore (2.6.19)
+  - AWSPinpoint (2.6.19):
+    - AWSCore (= 2.6.19)
+
+DEPENDENCIES:
+  - AWSPinpoint (~> 2.6.5)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AWSCore
+    - AWSPinpoint
+
+SPEC CHECKSUMS:
+  AWSCore: 3019940607dee2a467e0a8de638649d9fcb9afc3
+  AWSPinpoint: ae5f5e25d927c41b3236a532b6d950cbb47e5a44
+
+PODFILE CHECKSUM: 710c63240566b9517fd798794b1cc01037faca7f
+
+COCOAPODS: 1.5.3
