@@ -8,17 +8,46 @@
 
 /* Begin PBXBuildFile section */
 		27F2A46DD6D8C852FE288F6A /* Pods_LandOfVoca.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C6BC0C618C430DAEE4B55CB /* Pods_LandOfVoca.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		772B1C9820E207F000483A45 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 772B1C9720E207F000483A45 /* Info.plist */; };
 		774D718F20BD2D1A008ED909 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774D718E20BD2D1A008ED909 /* AppDelegate.swift */; };
 		774D719120BD2D1A008ED909 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774D719020BD2D1A008ED909 /* ViewController.swift */; };
 		774D719420BD2D1A008ED909 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 774D719220BD2D1A008ED909 /* Main.storyboard */; };
 		774D719620BD2D1B008ED909 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 774D719520BD2D1B008ED909 /* Assets.xcassets */; };
 		774D719920BD2D1B008ED909 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 774D719720BD2D1B008ED909 /* LaunchScreen.storyboard */; };
 		774D71A320BD2E5B008ED909 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 774D71A220BD2E5B008ED909 /* awsconfiguration.json */; };
+		77D867E020E1FC2D00D50672 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D867DF20E1FC2D00D50672 /* User.swift */; };
+		77D867E220E2000D00D50672 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D867E120E2000D00D50672 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		772B1C9120E207E400483A45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 772B1C8B20E207E300483A45 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2E278437EEEF4892DB8701986B54989E;
+			remoteInfo = AWSCore;
+		};
+		772B1C9320E207E400483A45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 772B1C8B20E207E300483A45 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 55B4B9B1A4A028BA44AA86173F145A71;
+			remoteInfo = AWSPinpoint;
+		};
+		772B1C9520E207E400483A45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 772B1C8B20E207E300483A45 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BE5D2517181ABB7F524AAB1AE15A241A;
+			remoteInfo = "Pods-LandOfVoca";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		269C1901E2BF0023D031C9E1 /* Pods-LandOfVoca.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LandOfVoca.release.xcconfig"; path = "Pods/Target Support Files/Pods-LandOfVoca/Pods-LandOfVoca.release.xcconfig"; sourceTree = "<group>"; };
 		6EA7BD77F3A06AE7F5BC8252 /* Pods-LandOfVoca.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LandOfVoca.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LandOfVoca/Pods-LandOfVoca.debug.xcconfig"; sourceTree = "<group>"; };
+		772B1C8B20E207E300483A45 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = ../../Pods/Pods.xcodeproj; sourceTree = "<group>"; };
+		772B1C9720E207F000483A45 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		774D718B20BD2D1A008ED909 /* LandOfVoca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LandOfVoca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		774D718E20BD2D1A008ED909 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		774D719020BD2D1A008ED909 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,6 +56,8 @@
 		774D719820BD2D1B008ED909 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		774D719A20BD2D1B008ED909 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		774D71A220BD2E5B008ED909 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
+		77D867DF20E1FC2D00D50672 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		77D867E120E2000D00D50672 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7C6BC0C618C430DAEE4B55CB /* Pods_LandOfVoca.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LandOfVoca.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -42,6 +73,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		772B1C8C20E207E300483A45 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				772B1C9220E207E400483A45 /* AWSCore.framework */,
+				772B1C9420E207E400483A45 /* AWSPinpoint.framework */,
+				772B1C9620E207E400483A45 /* Pods_LandOfVoca.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		774D718220BD2D1A008ED909 = {
 			isa = PBXGroup;
 			children = (
@@ -63,21 +104,57 @@
 		774D718D20BD2D1A008ED909 /* LandOfVoca */ = {
 			isa = PBXGroup;
 			children = (
-				774D718E20BD2D1A008ED909 /* AppDelegate.swift */,
-				774D719020BD2D1A008ED909 /* ViewController.swift */,
-				774D719220BD2D1A008ED909 /* Main.storyboard */,
-				774D719520BD2D1B008ED909 /* Assets.xcassets */,
-				774D719720BD2D1B008ED909 /* LaunchScreen.storyboard */,
-				774D71A220BD2E5B008ED909 /* awsconfiguration.json */,
-				774D719A20BD2D1B008ED909 /* Info.plist */,
+				77D867DE20E1E02300D50672 /* Model */,
+				77D867DC20E1DFEA00D50672 /* View */,
+				77D867DB20E1DFD000D50672 /* Controller */,
+				77D867DD20E1E00C00D50672 /* Resources */,
+				772B1C9720E207F000483A45 /* Info.plist */,
 			);
 			path = LandOfVoca;
+			sourceTree = "<group>";
+		};
+		77D867DB20E1DFD000D50672 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				774D718E20BD2D1A008ED909 /* AppDelegate.swift */,
+				774D719020BD2D1A008ED909 /* ViewController.swift */,
+				77D867E120E2000D00D50672 /* LoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		77D867DC20E1DFEA00D50672 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				774D719220BD2D1A008ED909 /* Main.storyboard */,
+				774D719720BD2D1B008ED909 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		77D867DD20E1E00C00D50672 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				772B1C8B20E207E300483A45 /* Pods.xcodeproj */,
+				774D719520BD2D1B008ED909 /* Assets.xcassets */,
+				774D71A220BD2E5B008ED909 /* awsconfiguration.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		77D867DE20E1E02300D50672 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				77D867DF20E1FC2D00D50672 /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		A81D719F99D1EA0718AC58F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				7C6BC0C618C430DAEE4B55CB /* Pods_LandOfVoca.framework */,
+				774D719A20BD2D1B008ED909 /* Info.plist */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -139,12 +216,42 @@
 			mainGroup = 774D718220BD2D1A008ED909;
 			productRefGroup = 774D718C20BD2D1A008ED909 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 772B1C8C20E207E300483A45 /* Products */;
+					ProjectRef = 772B1C8B20E207E300483A45 /* Pods.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				774D718A20BD2D1A008ED909 /* LandOfVoca */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		772B1C9220E207E400483A45 /* AWSCore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AWSCore.framework;
+			remoteRef = 772B1C9120E207E400483A45 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		772B1C9420E207E400483A45 /* AWSPinpoint.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AWSPinpoint.framework;
+			remoteRef = 772B1C9320E207E400483A45 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		772B1C9620E207E400483A45 /* Pods_LandOfVoca.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_LandOfVoca.framework;
+			remoteRef = 772B1C9520E207E400483A45 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		774D718920BD2D1A008ED909 /* Resources */ = {
@@ -154,6 +261,7 @@
 				774D71A320BD2E5B008ED909 /* awsconfiguration.json in Resources */,
 				774D719920BD2D1B008ED909 /* LaunchScreen.storyboard in Resources */,
 				774D719620BD2D1B008ED909 /* Assets.xcassets in Resources */,
+				772B1C9820E207F000483A45 /* Info.plist in Resources */,
 				774D719420BD2D1A008ED909 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,8 +314,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77D867E220E2000D00D50672 /* LoginViewController.swift in Sources */,
 				774D719120BD2D1A008ED909 /* ViewController.swift in Sources */,
 				774D718F20BD2D1A008ED909 /* AppDelegate.swift in Sources */,
+				77D867E020E1FC2D00D50672 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

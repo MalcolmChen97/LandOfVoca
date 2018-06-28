@@ -5,6 +5,9 @@
       location = "group:LandOfVoca.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Info.plist">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
