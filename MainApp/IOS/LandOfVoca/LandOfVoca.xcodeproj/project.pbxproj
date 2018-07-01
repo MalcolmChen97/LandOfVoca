@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		27F2A46DD6D8C852FE288F6A /* Pods_LandOfVoca.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C6BC0C618C430DAEE4B55CB /* Pods_LandOfVoca.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		772B1C9820E207F000483A45 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 772B1C9720E207F000483A45 /* Info.plist */; };
+		772B1C9C20E7158500483A45 /* Quizz2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772B1C9A20E7158500483A45 /* Quizz2ViewController.swift */; };
+		772B1CA220E72B6900483A45 /* Quizz2Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772B1CA120E72B6900483A45 /* Quizz2Question.swift */; };
+		772B1CA420E72B8600483A45 /* Quizz2QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772B1CA320E72B8600483A45 /* Quizz2QuestionBank.swift */; };
 		774D718F20BD2D1A008ED909 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774D718E20BD2D1A008ED909 /* AppDelegate.swift */; };
 		774D719120BD2D1A008ED909 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774D719020BD2D1A008ED909 /* ViewController.swift */; };
 		774D719420BD2D1A008ED909 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 774D719220BD2D1A008ED909 /* Main.storyboard */; };
@@ -48,6 +51,9 @@
 		6EA7BD77F3A06AE7F5BC8252 /* Pods-LandOfVoca.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LandOfVoca.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LandOfVoca/Pods-LandOfVoca.debug.xcconfig"; sourceTree = "<group>"; };
 		772B1C8B20E207E300483A45 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = ../../Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		772B1C9720E207F000483A45 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		772B1C9A20E7158500483A45 /* Quizz2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quizz2ViewController.swift; sourceTree = "<group>"; };
+		772B1CA120E72B6900483A45 /* Quizz2Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quizz2Question.swift; sourceTree = "<group>"; };
+		772B1CA320E72B8600483A45 /* Quizz2QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quizz2QuestionBank.swift; sourceTree = "<group>"; };
 		774D718B20BD2D1A008ED909 /* LandOfVoca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LandOfVoca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		774D718E20BD2D1A008ED909 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		774D719020BD2D1A008ED909 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +125,7 @@
 				774D718E20BD2D1A008ED909 /* AppDelegate.swift */,
 				774D719020BD2D1A008ED909 /* ViewController.swift */,
 				77D867E120E2000D00D50672 /* LoginViewController.swift */,
+				772B1C9A20E7158500483A45 /* Quizz2ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -146,6 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				77D867DF20E1FC2D00D50672 /* User.swift */,
+				772B1CA120E72B6900483A45 /* Quizz2Question.swift */,
+				772B1CA320E72B8600483A45 /* Quizz2QuestionBank.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -314,9 +323,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				772B1C9C20E7158500483A45 /* Quizz2ViewController.swift in Sources */,
 				77D867E220E2000D00D50672 /* LoginViewController.swift in Sources */,
+				772B1CA420E72B8600483A45 /* Quizz2QuestionBank.swift in Sources */,
 				774D719120BD2D1A008ED909 /* ViewController.swift in Sources */,
 				774D718F20BD2D1A008ED909 /* AppDelegate.swift in Sources */,
+				772B1CA220E72B6900483A45 /* Quizz2Question.swift in Sources */,
 				77D867E020E1FC2D00D50672 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
