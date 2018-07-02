@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2A3F0AA7DD656F3E35B5256FEB6BB570"
-               BuildableName = "Pods_LandOfVoca.framework"
-               BlueprintName = "Pods-LandOfVoca"
+               BlueprintIdentifier = "D5CD40530A48439B2D27ECF10D9D61B1"
+               BuildableName = "SwiftyJSON.framework"
+               BlueprintName = "SwiftyJSON"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2A3F0AA7DD656F3E35B5256FEB6BB570"
-            BuildableName = "Pods_LandOfVoca.framework"
-            BlueprintName = "Pods-LandOfVoca"
+            BlueprintIdentifier = "D5CD40530A48439B2D27ECF10D9D61B1"
+            BuildableName = "SwiftyJSON.framework"
+            BlueprintName = "SwiftyJSON"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

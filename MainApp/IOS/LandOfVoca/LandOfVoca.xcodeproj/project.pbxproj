@@ -12,6 +12,7 @@
 		772B1C9C20E7158500483A45 /* Quizz2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772B1C9A20E7158500483A45 /* Quizz2ViewController.swift */; };
 		772B1CA220E72B6900483A45 /* Quizz2Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772B1CA120E72B6900483A45 /* Quizz2Question.swift */; };
 		772B1CA420E72B8600483A45 /* Quizz2QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772B1CA320E72B8600483A45 /* Quizz2QuestionBank.swift */; };
+		772B1CA620E9D3D300483A45 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772B1CA520E9D3D300483A45 /* RegistrationViewController.swift */; };
 		774D718F20BD2D1A008ED909 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774D718E20BD2D1A008ED909 /* AppDelegate.swift */; };
 		774D719120BD2D1A008ED909 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774D719020BD2D1A008ED909 /* ViewController.swift */; };
 		774D719420BD2D1A008ED909 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 774D719220BD2D1A008ED909 /* Main.storyboard */; };
@@ -44,6 +45,20 @@
 			remoteGlobalIDString = BE5D2517181ABB7F524AAB1AE15A241A;
 			remoteInfo = "Pods-LandOfVoca";
 		};
+		772B1CAE20E9D7F100483A45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 772B1C8B20E207E300483A45 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = ACE7A378BD84ACA6BDBA650739C60815;
+			remoteInfo = Alamofire;
+		};
+		772B1CB020E9D7F100483A45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 772B1C8B20E207E300483A45 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5EAE422550DF949A559998CE1DA127DA;
+			remoteInfo = SwiftyJSON;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +69,7 @@
 		772B1C9A20E7158500483A45 /* Quizz2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quizz2ViewController.swift; sourceTree = "<group>"; };
 		772B1CA120E72B6900483A45 /* Quizz2Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quizz2Question.swift; sourceTree = "<group>"; };
 		772B1CA320E72B8600483A45 /* Quizz2QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quizz2QuestionBank.swift; sourceTree = "<group>"; };
+		772B1CA520E9D3D300483A45 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		774D718B20BD2D1A008ED909 /* LandOfVoca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LandOfVoca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		774D718E20BD2D1A008ED909 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		774D719020BD2D1A008ED909 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,11 +98,20 @@
 		772B1C8C20E207E300483A45 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				772B1CAF20E9D7F100483A45 /* Alamofire.framework */,
 				772B1C9220E207E400483A45 /* AWSCore.framework */,
 				772B1C9420E207E400483A45 /* AWSPinpoint.framework */,
 				772B1C9620E207E400483A45 /* Pods_LandOfVoca.framework */,
+				772B1CB120E9D7F100483A45 /* SwiftyJSON.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		772B1CA820E9D7F100483A45 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		774D718220BD2D1A008ED909 = {
@@ -110,11 +135,11 @@
 		774D718D20BD2D1A008ED909 /* LandOfVoca */ = {
 			isa = PBXGroup;
 			children = (
+				772B1CA820E9D7F100483A45 /* Service */,
 				77D867DE20E1E02300D50672 /* Model */,
 				77D867DC20E1DFEA00D50672 /* View */,
 				77D867DB20E1DFD000D50672 /* Controller */,
 				77D867DD20E1E00C00D50672 /* Resources */,
-				772B1C9720E207F000483A45 /* Info.plist */,
 			);
 			path = LandOfVoca;
 			sourceTree = "<group>";
@@ -126,6 +151,7 @@
 				774D719020BD2D1A008ED909 /* ViewController.swift */,
 				77D867E120E2000D00D50672 /* LoginViewController.swift */,
 				772B1C9A20E7158500483A45 /* Quizz2ViewController.swift */,
+				772B1CA520E9D3D300483A45 /* RegistrationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -142,6 +168,7 @@
 		77D867DD20E1E00C00D50672 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				772B1C9720E207F000483A45 /* Info.plist */,
 				772B1C8B20E207E300483A45 /* Pods.xcodeproj */,
 				774D719520BD2D1B008ED909 /* Assets.xcassets */,
 				774D71A220BD2E5B008ED909 /* awsconfiguration.json */,
@@ -260,6 +287,20 @@
 			remoteRef = 772B1C9520E207E400483A45 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		772B1CAF20E9D7F100483A45 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 772B1CAE20E9D7F100483A45 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		772B1CB120E9D7F100483A45 /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = 772B1CB020E9D7F100483A45 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -305,11 +346,15 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-LandOfVoca/Pods-LandOfVoca-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSPinpoint/AWSPinpoint.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSPinpoint.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -325,6 +370,7 @@
 			files = (
 				772B1C9C20E7158500483A45 /* Quizz2ViewController.swift in Sources */,
 				77D867E220E2000D00D50672 /* LoginViewController.swift in Sources */,
+				772B1CA620E9D3D300483A45 /* RegistrationViewController.swift in Sources */,
 				772B1CA420E72B8600483A45 /* Quizz2QuestionBank.swift in Sources */,
 				774D719120BD2D1A008ED909 /* ViewController.swift in Sources */,
 				774D718F20BD2D1A008ED909 /* AppDelegate.swift in Sources */,
@@ -476,7 +522,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JXN8HR5WGS;
-				INFOPLIST_FILE = LandOfVoca/Info.plist;
+				INFOPLIST_FILE = LandOfVoca/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -495,7 +541,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JXN8HR5WGS;
-				INFOPLIST_FILE = LandOfVoca/Info.plist;
+				INFOPLIST_FILE = LandOfVoca/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
