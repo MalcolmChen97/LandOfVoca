@@ -6,5 +6,6 @@ target :'LandOfVoca' do
     pod 'AWSPinpoint', '~> 2.6.5'
 
     # other pods
-
+    pod 'SwiftyJSON'
+    pod 'Alamofire'
 end
