@@ -34,7 +34,7 @@ class LoginViewController: UIViewController {
             haha in
             if haha.result.isSuccess {
                 print(haha.result.value!)
-                // TODO: parse
+                // MARK: -parse json
                 //                let responseJson : JSON = JSON(haha.result.value!)
                 //                print(responseJson)
             }else{
