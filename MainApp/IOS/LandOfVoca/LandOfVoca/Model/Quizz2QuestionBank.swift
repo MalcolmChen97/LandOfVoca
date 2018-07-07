@@ -10,6 +10,7 @@ import Foundation
 
 class Quizz2QuestionBank{
     var list = [Quizz2Question]()
+    //this should be on backend
     init(){
         let item = Quizz2Question(text:"我很渴，想喝Water",correctAnswer:true)
         
