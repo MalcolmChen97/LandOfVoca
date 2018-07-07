@@ -13,6 +13,9 @@
 		772B1CA220E72B6900483A45 /* Quizz2Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772B1CA120E72B6900483A45 /* Quizz2Question.swift */; };
 		772B1CA420E72B8600483A45 /* Quizz2QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772B1CA320E72B8600483A45 /* Quizz2QuestionBank.swift */; };
 		772B1CA620E9D3D300483A45 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772B1CA520E9D3D300483A45 /* RegistrationViewController.swift */; };
+		772B1CB620EDEC7900483A45 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 772B1CB420EDEC7900483A45 /* DataModel.xcdatamodeld */; };
+		772B1CDA20EF3D4200483A45 /* WordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772B1CD920EF3D4200483A45 /* WordViewController.swift */; };
+		772B1CDC20EF493100483A45 /* word.csv in Resources */ = {isa = PBXBuildFile; fileRef = 772B1CDB20EF493100483A45 /* word.csv */; };
 		774D718F20BD2D1A008ED909 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774D718E20BD2D1A008ED909 /* AppDelegate.swift */; };
 		774D719420BD2D1A008ED909 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 774D719220BD2D1A008ED909 /* Main.storyboard */; };
 		774D719620BD2D1B008ED909 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 774D719520BD2D1B008ED909 /* Assets.xcassets */; };
@@ -69,6 +72,9 @@
 		772B1CA120E72B6900483A45 /* Quizz2Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quizz2Question.swift; sourceTree = "<group>"; };
 		772B1CA320E72B8600483A45 /* Quizz2QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quizz2QuestionBank.swift; sourceTree = "<group>"; };
 		772B1CA520E9D3D300483A45 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		772B1CB520EDEC7900483A45 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		772B1CD920EF3D4200483A45 /* WordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordViewController.swift; sourceTree = "<group>"; };
+		772B1CDB20EF493100483A45 /* word.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = word.csv; sourceTree = "<group>"; };
 		774D718B20BD2D1A008ED909 /* LandOfVoca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LandOfVoca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		774D718E20BD2D1A008ED909 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		774D719320BD2D1A008ED909 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -112,6 +118,14 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		772B1CB720EDEC8000483A45 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				772B1CB420EDEC7900483A45 /* DataModel.xcdatamodeld */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		774D718220BD2D1A008ED909 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +147,7 @@
 		774D718D20BD2D1A008ED909 /* LandOfVoca */ = {
 			isa = PBXGroup;
 			children = (
+				772B1CB720EDEC8000483A45 /* Database */,
 				772B1CA820E9D7F100483A45 /* Service */,
 				77D867DE20E1E02300D50672 /* Model */,
 				77D867DC20E1DFEA00D50672 /* View */,
@@ -149,6 +164,7 @@
 				77D867E120E2000D00D50672 /* LoginViewController.swift */,
 				772B1C9A20E7158500483A45 /* Quizz2ViewController.swift */,
 				772B1CA520E9D3D300483A45 /* RegistrationViewController.swift */,
+				772B1CD920EF3D4200483A45 /* WordViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -169,6 +185,7 @@
 				772B1C8B20E207E300483A45 /* Pods.xcodeproj */,
 				774D719520BD2D1B008ED909 /* Assets.xcassets */,
 				774D71A220BD2E5B008ED909 /* awsconfiguration.json */,
+				772B1CDB20EF493100483A45 /* word.csv */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -307,6 +324,7 @@
 			files = (
 				774D71A320BD2E5B008ED909 /* awsconfiguration.json in Resources */,
 				774D719920BD2D1B008ED909 /* LaunchScreen.storyboard in Resources */,
+				772B1CDC20EF493100483A45 /* word.csv in Resources */,
 				774D719620BD2D1B008ED909 /* Assets.xcassets in Resources */,
 				772B1C9820E207F000483A45 /* Info.plist in Resources */,
 				774D719420BD2D1A008ED909 /* Main.storyboard in Resources */,
@@ -366,7 +384,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				772B1C9C20E7158500483A45 /* Quizz2ViewController.swift in Sources */,
+				772B1CB620EDEC7900483A45 /* DataModel.xcdatamodeld in Sources */,
 				77D867E220E2000D00D50672 /* LoginViewController.swift in Sources */,
+				772B1CDA20EF3D4200483A45 /* WordViewController.swift in Sources */,
 				772B1CA620E9D3D300483A45 /* RegistrationViewController.swift in Sources */,
 				772B1CA420E72B8600483A45 /* Quizz2QuestionBank.swift in Sources */,
 				774D718F20BD2D1A008ED909 /* AppDelegate.swift in Sources */,
@@ -571,6 +591,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		772B1CB420EDEC7900483A45 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				772B1CB520EDEC7900483A45 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 772B1CB520EDEC7900483A45 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 774D718320BD2D1A008ED909 /* Project object */;
 }
