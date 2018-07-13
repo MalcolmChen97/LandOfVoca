@@ -1,4 +1,4 @@
-package com.tigerteam.landofvoca;
+package com.tigerteam.landofvoca.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,10 +10,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.tigerteam.landofvoca.R;
+import com.tigerteam.landofvoca.model.Book;
+import com.tigerteam.landofvoca.model.Word;
 
 import java.io.BufferedReader;
 import java.io.InputStream;

@@ -1,4 +1,4 @@
-package com.tigerteam.landofvoca;
+package com.tigerteam.landofvoca.model;
 
 /**
  * Created by MalcolmChen on 2018-05-21.

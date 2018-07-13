@@ -5,6 +5,7 @@ import org.hibernate.validator.constraints.Length;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
+import java.util.Set;
 
 @Entity
 @Table(name = "user")
@@ -12,7 +13,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
+    @Column(name = "user_id")
     private int id;
     @Column(name="email")
     @Email(message = "Please provide a valid email")
@@ -25,13 +26,12 @@ public class User {
     @Column(name = "username",unique = true)
     @NotEmpty(message = "Please provide your username")
     private String username;
-    @Column(name = "nickname",unique = true)
-    @NotEmpty(message = "Please provide your username")
-    private String nickname;
-    @Column(name = "token")
-    private String token;
+    @Column(name = "active")
+    private int active;
+    @ManyToMany
+    @JoinTable(name = "user_role",joinColumns = @JoinColumn(name = "user_id"),inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private Set<Role> roles;
 
-    //DSADSA
     public int getId() {
         return id;
     }
@@ -64,19 +64,19 @@ public class User {
         this.username = username;
     }
 
-    public String getNickname() {
-        return nickname;
+    public int getActive() {
+        return active;
     }
 
-    public void setNickname(String nickname) {
-        this.nickname = nickname;
+    public void setActive(int active) {
+        this.active = active;
     }
 
-    public String getToken() {
-        return token;
+    public Set<Role> getRoles() {
+        return roles;
     }
 
-    public void setToken(String token) {
-        this.token = token;
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
     }
 }

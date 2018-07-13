@@ -17,25 +17,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     // Add the pinpoint variable
     var pinpoint: AWSPinpoint?
-    let userDefaults = UserDefaults.standard
+//    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         // Initialize Pinpoint to enable session analytics
         pinpoint = AWSPinpoint(configuration:
             AWSPinpointConfiguration.defaultPinpointConfiguration(launchOptions: launchOptions))
-        let notFirstTime : Bool = userDefaults.bool(forKey: "loaded")
-        if !notFirstTime{
-            removeData()
-            loadData()
-            saveContext()
-            userDefaults.set(true, forKey: "loaded")
+        
+        //MARK: load our database
+        //TODO: this would be changed later
+        let context = persistentContainer.viewContext
+        do{
+            let path = Bundle.main.path(forResource: "word", ofType: "csv")!
+            let data =  try String(contentsOfFile: path)
+            let rows = data.components(separatedBy: "\n")
+            for row in rows {
+                let columns = row.components(separatedBy: ",")
+                if(columns.count == 2){
+                    let newWord = Word(context: context)
+                    newWord.chinese = columns[1]
+                    newWord.english = columns[0]
+                }
+                
+            }
+        }catch{
+            print("error \(error)")
         }
-        
-        
-        
-        
-        
+        saveContext()
         return true
     }
 
@@ -107,44 +116,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-    
-    // MARK: - DATABASE
-    func loadData(){
-        // Load Data From all csv files
-        let context = persistentContainer.viewContext
-        do{
-            let path = Bundle.main.path(forResource: "toefl", ofType: "csv")!
-            let data =  try String(contentsOfFile: path)
-            let rows = data.components(separatedBy: "\n")
-            for row in rows {
-                let columns = row.components(separatedBy: ",")
-                if(columns.count == 2){
-                    let newWord = Word(context: context)
-                    newWord.chinese = columns[1]
-                    newWord.english = columns[0]
-                }
-                
-            }
-        }catch{
-            print("error \(error)")
-        }
-        
-    }
-    
-    func removeData () {
-        // Remove the existing items
-        var wordArray : [Word]
-        let context = persistentContainer.viewContext
-        do{
-            wordArray = try context.fetch(Word.fetchRequest())
-        }catch{
-            print("the error is \(error)")
-            wordArray = []
-        }
-        for eachWord in wordArray{
-            context.delete(eachWord)
-        }
-    }
+
 
 
 }

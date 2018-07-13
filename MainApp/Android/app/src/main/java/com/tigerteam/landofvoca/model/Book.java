@@ -1,4 +1,4 @@
-package com.tigerteam.landofvoca;
+package com.tigerteam.landofvoca.model;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -21,9 +21,6 @@
 		774D719620BD2D1B008ED909 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 774D719520BD2D1B008ED909 /* Assets.xcassets */; };
 		774D719920BD2D1B008ED909 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 774D719720BD2D1B008ED909 /* LaunchScreen.storyboard */; };
 		774D71A320BD2E5B008ED909 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 774D71A220BD2E5B008ED909 /* awsconfiguration.json */; };
-		779D754E20F46A9D00EF8BE5 /* toefl.csv in Resources */ = {isa = PBXBuildFile; fileRef = 779D754820F46A9D00EF8BE5 /* toefl.csv */; };
-		779D755020F48B5C00EF8BE5 /* Overall.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 779D754F20F48B5C00EF8BE5 /* Overall.storyboard */; };
-		779D755D20F71E6E00EF8BE5 /* MiddlePartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779D755C20F71E6E00EF8BE5 /* MiddlePartViewController.swift */; };
 		77D867E020E1FC2D00D50672 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D867DF20E1FC2D00D50672 /* User.swift */; };
 		77D867E220E2000D00D50672 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D867E120E2000D00D50672 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
@@ -64,13 +61,6 @@
 			remoteGlobalIDString = 5EAE422550DF949A559998CE1DA127DA;
 			remoteInfo = SwiftyJSON;
 		};
-		779D755A20F71E4400EF8BE5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 772B1C8B20E207E300483A45 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0A1B7C84A30F795A5EAFEABC91C9FB7C;
-			remoteInfo = DKCircleButton;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -92,9 +82,6 @@
 		774D719820BD2D1B008ED909 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		774D719A20BD2D1B008ED909 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		774D71A220BD2E5B008ED909 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
-		779D754820F46A9D00EF8BE5 /* toefl.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = toefl.csv; path = ../../../../../Tools/Crawler/toefl.csv; sourceTree = "<group>"; };
-		779D754F20F48B5C00EF8BE5 /* Overall.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Overall.storyboard; sourceTree = "<group>"; };
-		779D755C20F71E6E00EF8BE5 /* MiddlePartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddlePartViewController.swift; sourceTree = "<group>"; };
 		77D867DF20E1FC2D00D50672 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		77D867E120E2000D00D50672 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7C6BC0C618C430DAEE4B55CB /* Pods_LandOfVoca.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LandOfVoca.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,7 +105,6 @@
 				772B1CAF20E9D7F100483A45 /* Alamofire.framework */,
 				772B1C9220E207E400483A45 /* AWSCore.framework */,
 				772B1C9420E207E400483A45 /* AWSPinpoint.framework */,
-				779D755B20F71E4400EF8BE5 /* DKCircleButton.framework */,
 				772B1C9620E207E400483A45 /* Pods_LandOfVoca.framework */,
 				772B1CB120E9D7F100483A45 /* SwiftyJSON.framework */,
 			);
@@ -171,30 +157,13 @@
 			path = LandOfVoca;
 			sourceTree = "<group>";
 		};
-		779D755120F48D6100EF8BE5 /* PreLevel */ = {
-			isa = PBXGroup;
-			children = (
-				77D867E120E2000D00D50672 /* LoginViewController.swift */,
-				772B1CA520E9D3D300483A45 /* RegistrationViewController.swift */,
-			);
-			path = PreLevel;
-			sourceTree = "<group>";
-		};
-		779D755320F71E4400EF8BE5 /* MainLevel */ = {
-			isa = PBXGroup;
-			children = (
-				779D755C20F71E6E00EF8BE5 /* MiddlePartViewController.swift */,
-			);
-			path = MainLevel;
-			sourceTree = "<group>";
-		};
 		77D867DB20E1DFD000D50672 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				779D755320F71E4400EF8BE5 /* MainLevel */,
 				774D718E20BD2D1A008ED909 /* AppDelegate.swift */,
-				779D755120F48D6100EF8BE5 /* PreLevel */,
+				77D867E120E2000D00D50672 /* LoginViewController.swift */,
 				772B1C9A20E7158500483A45 /* Quizz2ViewController.swift */,
+				772B1CA520E9D3D300483A45 /* RegistrationViewController.swift */,
 				772B1CD920EF3D4200483A45 /* WordViewController.swift */,
 			);
 			path = Controller;
@@ -203,9 +172,8 @@
 		77D867DC20E1DFEA00D50672 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				774D719720BD2D1B008ED909 /* LaunchScreen.storyboard */,
 				774D719220BD2D1A008ED909 /* Main.storyboard */,
-				779D754F20F48B5C00EF8BE5 /* Overall.storyboard */,
+				774D719720BD2D1B008ED909 /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -217,7 +185,6 @@
 				772B1C8B20E207E300483A45 /* Pods.xcodeproj */,
 				774D719520BD2D1B008ED909 /* Assets.xcassets */,
 				774D71A220BD2E5B008ED909 /* awsconfiguration.json */,
-				779D754820F46A9D00EF8BE5 /* toefl.csv */,
 				772B1CDB20EF493100483A45 /* word.csv */,
 			);
 			path = Resources;
@@ -348,13 +315,6 @@
 			remoteRef = 772B1CB020E9D7F100483A45 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		779D755B20F71E4400EF8BE5 /* DKCircleButton.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = DKCircleButton.framework;
-			remoteRef = 779D755A20F71E4400EF8BE5 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -363,12 +323,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				774D71A320BD2E5B008ED909 /* awsconfiguration.json in Resources */,
-				779D754E20F46A9D00EF8BE5 /* toefl.csv in Resources */,
 				774D719920BD2D1B008ED909 /* LaunchScreen.storyboard in Resources */,
 				772B1CDC20EF493100483A45 /* word.csv in Resources */,
 				774D719620BD2D1B008ED909 /* Assets.xcassets in Resources */,
 				772B1C9820E207F000483A45 /* Info.plist in Resources */,
-				779D755020F48B5C00EF8BE5 /* Overall.storyboard in Resources */,
 				774D719420BD2D1A008ED909 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,7 +391,6 @@
 				772B1CA420E72B8600483A45 /* Quizz2QuestionBank.swift in Sources */,
 				774D718F20BD2D1A008ED909 /* AppDelegate.swift in Sources */,
 				772B1CA220E72B6900483A45 /* Quizz2Question.swift in Sources */,
-				779D755D20F71E6E00EF8BE5 /* MiddlePartViewController.swift in Sources */,
 				77D867E020E1FC2D00D50672 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
