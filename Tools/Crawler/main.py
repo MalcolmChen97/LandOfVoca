@@ -80,12 +80,14 @@ def get_urls(url_content, root_url="https://www.shanbay.com"):
 #save all useful results got from previous steps
 def save_contents(result):
     global index
-    with codecs.open(wordbooks_string[index], 'w', 'utf_8_sig') as f:
+    with codecs.open(wordbooks_string[index] + '.csv', 'w', 'utf-8') as f:
         writer = csv.writer(f)
         for i in range(len(result)):
             try:
                 if is_alphabet(result[i][1]):
-                    writer.writerow([result[i][1], result[i][3]])
+
+
+                    writer.writerow( [ result[i][1], "".join(result[i][3]).replace('\n','') ])
                     print("write in line:", i)
             except:
                 print("error in line:{}, contents is:{}".format(i, result[i]))
