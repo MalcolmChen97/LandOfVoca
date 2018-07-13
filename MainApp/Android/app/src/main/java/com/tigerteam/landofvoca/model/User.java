@@ -11,6 +11,11 @@ public class User {
     private String userName;
     private String password;
     private boolean isLogin;
+
+
+
+
+    private String token;
     private static User instance;
 
     private User(){
@@ -39,6 +44,10 @@ public class User {
         return isLogin;
     }
 
+    public String getToken() {
+        return token;
+    }
+
     //setter
     public void setUserName(String userName) {
         this.userName = userName;
@@ -50,6 +59,10 @@ public class User {
 
     public void setLogin(boolean login) {
         isLogin = login;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
     }
 
 

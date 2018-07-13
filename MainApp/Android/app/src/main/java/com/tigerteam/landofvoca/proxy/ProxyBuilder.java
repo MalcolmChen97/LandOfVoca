@@ -21,7 +21,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class ProxyBuilder {
-    private static final String SERVER_URL = "https://cmpt276-1177-bf.cmpt.sfu.ca:8443/";
+    private static final String SERVER_URL = "http://10.0.2.2:8080";
     private static SimpleCallback<String> receivedTokenCallback;
 
 
@@ -34,23 +34,23 @@ public class ProxyBuilder {
      * @param apiKey   Your group's API key to communicate with the server.
      * @return proxy object to call the server.
      */
-    public static ApiInterface getProxy(String apiKey) {
-        return getProxy(apiKey);
-    }
+//    public static ApiInterface getProxy(String apiKey) {
+//        return getProxy(apiKey);
+//    }
 
     /**
      * Return the proxy that client code can use to call server.
-     * @param apiKey   Your group's API key to communicate with the server.
+     // @param apiKey   Your group's API key to communicate with the server.
      * @param token    The token you have been issued
      * @return proxy object to call the server.
      */
-    public static ApiInterface getProxy(String apiKey, String token) {
+    public static ApiInterface getProxy(String token) {
         // Enable Logging
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
         logging.setLevel(HttpLoggingInterceptor.Level.BODY);
         OkHttpClient client = new OkHttpClient.Builder()
                 .addInterceptor(logging)
-                .addInterceptor(new AddHeaderInterceptor(apiKey, token))
+                .addInterceptor(new AddHeaderInterceptor(token))
                 .build();
 
         // Build Retrofit proxy object for server
@@ -97,12 +97,11 @@ public class ProxyBuilder {
             caller.enqueue(new Callback<T>() {
             @Override
             public void onResponse(Call<T> call, retrofit2.Response<T> response) {
-
                 // Process the response
                 if (response.errorBody() == null) {
                     // Check for authentication token:
                     String tokenInHeader = response.headers().get("Authorization");
-                    if (tokenInHeader != null) {
+                   // if (tokenInHeader != null) {
                         if (receivedTokenCallback != null) {
                             receivedTokenCallback.callback(tokenInHeader);
 
@@ -110,7 +109,7 @@ public class ProxyBuilder {
                             // We got the token, but nobody wanted it!
                             Log.w("ProxyBuilder", "WARNING: Received token but no callback registered for it!");
                         }
-                    }
+                    //}
 
                     if (callback != null) {
                         T body = response.body();
@@ -151,12 +150,11 @@ public class ProxyBuilder {
     --------------------------------
  */
     private static class AddHeaderInterceptor implements Interceptor {
-        private String apiKey;
         private String token;
 
 
-        public AddHeaderInterceptor(String apiKey, String token) {
-            this.apiKey = apiKey;
+        public AddHeaderInterceptor( String token) {
+
             this.token = token;
         }
 
@@ -166,11 +164,6 @@ public class ProxyBuilder {
             Request originalRequest = chain.request();
 
             Request.Builder builder = originalRequest.newBuilder();
-            // Add API header
-            if (apiKey != null) {
-                builder.header("apiKey", apiKey);
-
-            }
             // Add Token
             if (token != null) {
                 builder.header("Authorization", token);

@@ -1,5 +1,7 @@
 package com.tigerteam.landofvoca.proxy;
 
+import com.tigerteam.landofvoca.model.User;
+
 import java.util.List;
 import java.util.Map;
 
@@ -19,6 +21,9 @@ public interface ApiInterface {
     @GET("getApiKey")
     Call<String> getApiKey(@Query("groupName") String groupName,
                            @Query("sfuUserId") String sfuId);
+
+    @GET("/user/login")
+    Call<User> getToLogin();
 
 //    @POST("/users/signup")
 //    Call<User> createNewUser(@Body User user);

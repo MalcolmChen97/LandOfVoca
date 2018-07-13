@@ -13,11 +13,18 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
 import com.tigerteam.landofvoca.R;
+import com.tigerteam.landofvoca.model.ProxyManager;
 import com.tigerteam.landofvoca.model.User;
+import com.tigerteam.landofvoca.proxy.ApiInterface;
+import com.tigerteam.landofvoca.proxy.ProxyBuilder;
+
+import java.sql.SQLOutput;
 
 public class LoginActivity extends AppCompatActivity {
     private static User user  = User.getInstance();
+
     private String userName = null;
     private String password = null;
 
@@ -33,6 +40,7 @@ public class LoginActivity extends AppCompatActivity {
     private final static String savedUserName = "savedUserName";
     private final static String savedPassword = "savedPassword";
     private final static String savedIsLogin = "savedIsLogin";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -81,13 +89,9 @@ public class LoginActivity extends AppCompatActivity {
 
         @Override
         protected Boolean doInBackground(Void... x) {
-            try {
-                // Simulate network access.
-                //TODO: internet authorization accessThread
-                Thread.sleep(3000);
-            } catch (InterruptedException e) {
-                return false;
-            }
+            ProxyManager.connectToServerWithoutToken(getApplicationContext());
+            ProxyBuilder.SimpleCallback<User> callback = returnString -> responseGetToLogin(returnString);
+            ProxyManager.getToLogin(callback);
             return false;
         }
 
@@ -136,7 +140,11 @@ public class LoginActivity extends AppCompatActivity {
         userNameText.setVisibility(View.VISIBLE);
         userPasswordText.setVisibility(View.VISIBLE);
     }
+    //response
 
+    private void responseGetToLogin(User user){
+        
+    }
     public static Intent makeIntent(Context context){
         return  new Intent(context,LoginActivity.class);
     }
