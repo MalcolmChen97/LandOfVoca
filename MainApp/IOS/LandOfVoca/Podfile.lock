@@ -1,8 +1,8 @@
 PODS:
-  - Alamofire (4.7.2)
-  - AWSCore (2.6.19)
-  - AWSPinpoint (2.6.19):
-    - AWSCore (= 2.6.19)
+  - Alamofire (4.7.3)
+  - AWSCore (2.6.23)
+  - AWSPinpoint (2.6.23):
+    - AWSCore (= 2.6.23)
   - SwiftyJSON (4.1.0)
 
 DEPENDENCIES:
@@ -18,11 +18,11 @@ SPEC REPOS:
     - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
-  AWSCore: 3019940607dee2a467e0a8de638649d9fcb9afc3
-  AWSPinpoint: ae5f5e25d927c41b3236a532b6d950cbb47e5a44
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  AWSCore: d56f69d7312e652e51c70f3b25e1687a5c2d06ca
+  AWSPinpoint: 198ece283bc4b5b7dc8e08dfb3415b6225203e7f
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: 79222b0e306c62a44f2b4b30d597346875e7bb64
+PODFILE CHECKSUM: 7213687e21f41112e2cc41fb470db68c01059d71
 
 COCOAPODS: 1.5.3

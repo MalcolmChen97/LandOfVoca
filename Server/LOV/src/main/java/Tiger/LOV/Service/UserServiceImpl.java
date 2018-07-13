@@ -1,24 +1,17 @@
 package Tiger.LOV.Service;
 
-import Tiger.LOV.DAO.RoleRepository;
 import Tiger.LOV.DAO.UserRepository;
-import Tiger.LOV.Model.Role;
 import Tiger.LOV.Model.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import java.util.Arrays;
-import java.util.HashSet;
 
 @Service("userService")
 public class UserServiceImpl implements UserService {
     @Autowired
     private UserRepository userRepository;
-    @Autowired
-    private RoleRepository roleRepository;
-    @Autowired
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
+
+    @Override
+    public User findUserByNickName(String nickName) { return userRepository.findByNickname(nickName); }
 
     @Override
     public User findUserByEmail(String email) {
@@ -26,13 +19,21 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public User findUserByUserName(String userName) {return userRepository.findByUsername(userName); }
+
+    @Override
     public void saveUser(User user) {
-        System.out.println(user.getPassword());
-        System.out.println(bCryptPasswordEncoder.encode(user.getPassword()));
-        user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
-        System.out.println(user.getPassword()+" new!!!!");
-        Role userRole = roleRepository.findByRole("ADMIN");
-        user.setRoles(new HashSet<Role>(Arrays.asList(userRole)));
         userRepository.save(user);
+    }
+
+    @Override
+    public User auth(String userName, String password) {
+        User thisUser = findUserByUserName(userName);
+        if(thisUser != null && thisUser.getPassword().equals(password)) {
+            return thisUser;
+        }else{
+            //TODO::should throw exception here!
+            return null;
+        }
     }
 }

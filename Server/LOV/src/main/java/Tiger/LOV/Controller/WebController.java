@@ -15,7 +15,7 @@ import javax.validation.Valid;
 
 @Controller
 @RequestMapping("/web")
-public class LoginController {
+public class WebController {
     @Autowired
     private UserService userService;
 
