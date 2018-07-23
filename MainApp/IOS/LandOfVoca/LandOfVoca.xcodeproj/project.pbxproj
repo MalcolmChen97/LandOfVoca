@@ -14,16 +14,18 @@
 		772B1CA420E72B8600483A45 /* Quizz2QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772B1CA320E72B8600483A45 /* Quizz2QuestionBank.swift */; };
 		772B1CA620E9D3D300483A45 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772B1CA520E9D3D300483A45 /* RegistrationViewController.swift */; };
 		772B1CB620EDEC7900483A45 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 772B1CB420EDEC7900483A45 /* DataModel.xcdatamodeld */; };
-		772B1CDA20EF3D4200483A45 /* WordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772B1CD920EF3D4200483A45 /* WordViewController.swift */; };
 		772B1CDC20EF493100483A45 /* word.csv in Resources */ = {isa = PBXBuildFile; fileRef = 772B1CDB20EF493100483A45 /* word.csv */; };
 		774D718F20BD2D1A008ED909 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774D718E20BD2D1A008ED909 /* AppDelegate.swift */; };
 		774D719420BD2D1A008ED909 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 774D719220BD2D1A008ED909 /* Main.storyboard */; };
 		774D719620BD2D1B008ED909 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 774D719520BD2D1B008ED909 /* Assets.xcassets */; };
 		774D719920BD2D1B008ED909 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 774D719720BD2D1B008ED909 /* LaunchScreen.storyboard */; };
-		774D71A320BD2E5B008ED909 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 774D71A220BD2E5B008ED909 /* awsconfiguration.json */; };
+		775014862101AB3500DAB85F /* WordCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775014852101AB3500DAB85F /* WordCard.swift */; };
+		7750148D21030E0F00DAB85F /* TinderWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7750148C21030E0F00DAB85F /* TinderWordViewController.swift */; };
+		7750148F2103128300DAB85F /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 7750148E2103128300DAB85F /* awsconfiguration.json */; };
 		779D754E20F46A9D00EF8BE5 /* toefl.csv in Resources */ = {isa = PBXBuildFile; fileRef = 779D754820F46A9D00EF8BE5 /* toefl.csv */; };
 		779D755020F48B5C00EF8BE5 /* Overall.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 779D754F20F48B5C00EF8BE5 /* Overall.storyboard */; };
 		779D755D20F71E6E00EF8BE5 /* MiddlePartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779D755C20F71E6E00EF8BE5 /* MiddlePartViewController.swift */; };
+		779D75662100540600EF8BE5 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779D75652100540600EF8BE5 /* RoundButton.swift */; };
 		77D867E020E1FC2D00D50672 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D867DF20E1FC2D00D50672 /* User.swift */; };
 		77D867E220E2000D00D50672 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D867E120E2000D00D50672 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
@@ -64,13 +66,6 @@
 			remoteGlobalIDString = 5EAE422550DF949A559998CE1DA127DA;
 			remoteInfo = SwiftyJSON;
 		};
-		779D755A20F71E4400EF8BE5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 772B1C8B20E207E300483A45 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0A1B7C84A30F795A5EAFEABC91C9FB7C;
-			remoteInfo = DKCircleButton;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -83,7 +78,6 @@
 		772B1CA320E72B8600483A45 /* Quizz2QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quizz2QuestionBank.swift; sourceTree = "<group>"; };
 		772B1CA520E9D3D300483A45 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		772B1CB520EDEC7900483A45 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
-		772B1CD920EF3D4200483A45 /* WordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordViewController.swift; sourceTree = "<group>"; };
 		772B1CDB20EF493100483A45 /* word.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = word.csv; sourceTree = "<group>"; };
 		774D718B20BD2D1A008ED909 /* LandOfVoca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LandOfVoca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		774D718E20BD2D1A008ED909 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,10 +85,13 @@
 		774D719520BD2D1B008ED909 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		774D719820BD2D1B008ED909 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		774D719A20BD2D1B008ED909 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		774D71A220BD2E5B008ED909 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
+		775014852101AB3500DAB85F /* WordCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCard.swift; sourceTree = "<group>"; };
+		7750148C21030E0F00DAB85F /* TinderWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderWordViewController.swift; sourceTree = "<group>"; };
+		7750148E2103128300DAB85F /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		779D754820F46A9D00EF8BE5 /* toefl.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = toefl.csv; path = ../../../../../Tools/Crawler/toefl.csv; sourceTree = "<group>"; };
 		779D754F20F48B5C00EF8BE5 /* Overall.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Overall.storyboard; sourceTree = "<group>"; };
 		779D755C20F71E6E00EF8BE5 /* MiddlePartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddlePartViewController.swift; sourceTree = "<group>"; };
+		779D75652100540600EF8BE5 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		77D867DF20E1FC2D00D50672 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		77D867E120E2000D00D50672 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7C6BC0C618C430DAEE4B55CB /* Pods_LandOfVoca.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LandOfVoca.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,18 +115,10 @@
 				772B1CAF20E9D7F100483A45 /* Alamofire.framework */,
 				772B1C9220E207E400483A45 /* AWSCore.framework */,
 				772B1C9420E207E400483A45 /* AWSPinpoint.framework */,
-				779D755B20F71E4400EF8BE5 /* DKCircleButton.framework */,
 				772B1C9620E207E400483A45 /* Pods_LandOfVoca.framework */,
 				772B1CB120E9D7F100483A45 /* SwiftyJSON.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		772B1CA820E9D7F100483A45 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Service;
 			sourceTree = "<group>";
 		};
 		772B1CB720EDEC8000483A45 /* Database */ = {
@@ -161,8 +150,8 @@
 		774D718D20BD2D1A008ED909 /* LandOfVoca */ = {
 			isa = PBXGroup;
 			children = (
+				779D75642100537200EF8BE5 /* UIElement */,
 				772B1CB720EDEC8000483A45 /* Database */,
-				772B1CA820E9D7F100483A45 /* Service */,
 				77D867DE20E1E02300D50672 /* Model */,
 				77D867DC20E1DFEA00D50672 /* View */,
 				77D867DB20E1DFD000D50672 /* Controller */,
@@ -184,18 +173,27 @@
 			isa = PBXGroup;
 			children = (
 				779D755C20F71E6E00EF8BE5 /* MiddlePartViewController.swift */,
+				7750148C21030E0F00DAB85F /* TinderWordViewController.swift */,
 			);
 			path = MainLevel;
+			sourceTree = "<group>";
+		};
+		779D75642100537200EF8BE5 /* UIElement */ = {
+			isa = PBXGroup;
+			children = (
+				779D75652100540600EF8BE5 /* RoundButton.swift */,
+				775014852101AB3500DAB85F /* WordCard.swift */,
+			);
+			path = UIElement;
 			sourceTree = "<group>";
 		};
 		77D867DB20E1DFD000D50672 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				779D755320F71E4400EF8BE5 /* MainLevel */,
 				774D718E20BD2D1A008ED909 /* AppDelegate.swift */,
 				779D755120F48D6100EF8BE5 /* PreLevel */,
+				779D755320F71E4400EF8BE5 /* MainLevel */,
 				772B1C9A20E7158500483A45 /* Quizz2ViewController.swift */,
-				772B1CD920EF3D4200483A45 /* WordViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -213,10 +211,10 @@
 		77D867DD20E1E00C00D50672 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7750148E2103128300DAB85F /* awsconfiguration.json */,
 				772B1C9720E207F000483A45 /* Info.plist */,
 				772B1C8B20E207E300483A45 /* Pods.xcodeproj */,
 				774D719520BD2D1B008ED909 /* Assets.xcassets */,
-				774D71A220BD2E5B008ED909 /* awsconfiguration.json */,
 				779D754820F46A9D00EF8BE5 /* toefl.csv */,
 				772B1CDB20EF493100483A45 /* word.csv */,
 			);
@@ -348,13 +346,6 @@
 			remoteRef = 772B1CB020E9D7F100483A45 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		779D755B20F71E4400EF8BE5 /* DKCircleButton.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = DKCircleButton.framework;
-			remoteRef = 779D755A20F71E4400EF8BE5 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -362,7 +353,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				774D71A320BD2E5B008ED909 /* awsconfiguration.json in Resources */,
+				7750148F2103128300DAB85F /* awsconfiguration.json in Resources */,
 				779D754E20F46A9D00EF8BE5 /* toefl.csv in Resources */,
 				774D719920BD2D1B008ED909 /* LaunchScreen.storyboard in Resources */,
 				772B1CDC20EF493100483A45 /* word.csv in Resources */,
@@ -428,7 +419,9 @@
 				772B1C9C20E7158500483A45 /* Quizz2ViewController.swift in Sources */,
 				772B1CB620EDEC7900483A45 /* DataModel.xcdatamodeld in Sources */,
 				77D867E220E2000D00D50672 /* LoginViewController.swift in Sources */,
-				772B1CDA20EF3D4200483A45 /* WordViewController.swift in Sources */,
+				775014862101AB3500DAB85F /* WordCard.swift in Sources */,
+				7750148D21030E0F00DAB85F /* TinderWordViewController.swift in Sources */,
+				779D75662100540600EF8BE5 /* RoundButton.swift in Sources */,
 				772B1CA620E9D3D300483A45 /* RegistrationViewController.swift in Sources */,
 				772B1CA420E72B8600483A45 /* Quizz2QuestionBank.swift in Sources */,
 				774D718F20BD2D1A008ED909 /* AppDelegate.swift in Sources */,
