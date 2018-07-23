@@ -5,6 +5,10 @@ import Tiger.LOV.Model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 @Service("userService")
 public class UserServiceImpl implements UserService {
     @Autowired
@@ -33,7 +37,28 @@ public class UserServiceImpl implements UserService {
             return thisUser;
         }else{
             //TODO::should throw exception here!
+            //haha
             return null;
         }
     }
+
+  @Override
+  public User findUserById(long id) {
+    return userRepository.findById(id);
+  }
+
+  @Override
+  public List<User> findAllUsers() {
+      List<User> allUsers = new ArrayList<>();
+      Iterator<User> userIterator = userRepository.findAll().iterator();
+      while (userIterator.hasNext()){
+        allUsers.add(userIterator.next());
+      }
+      return allUsers;
+  }
+
+  @Override
+  public void deleteUserByid(long id) {
+      userRepository.deleteById(id);
+  }
 }

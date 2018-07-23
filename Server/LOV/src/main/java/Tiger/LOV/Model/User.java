@@ -13,7 +13,7 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
-    private int id;
+    private long id;
     @Column(name="email")
     @Email(message = "Please provide a valid email")
     @NotEmpty(message = "Please provide an email")
@@ -32,11 +32,11 @@ public class User {
     private String token;
 
     //DSADSA
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
