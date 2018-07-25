@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		27F2A46DD6D8C852FE288F6A /* Pods_LandOfVoca.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C6BC0C618C430DAEE4B55CB /* Pods_LandOfVoca.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		7708C96321084598009FE09E /* WordCard_Back.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7708C96221084598009FE09E /* WordCard_Back.swift */; };
 		772B1C9820E207F000483A45 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 772B1C9720E207F000483A45 /* Info.plist */; };
 		772B1C9C20E7158500483A45 /* Quizz2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772B1C9A20E7158500483A45 /* Quizz2ViewController.swift */; };
 		772B1CA220E72B6900483A45 /* Quizz2Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772B1CA120E72B6900483A45 /* Quizz2Question.swift */; };
@@ -71,6 +72,7 @@
 /* Begin PBXFileReference section */
 		269C1901E2BF0023D031C9E1 /* Pods-LandOfVoca.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LandOfVoca.release.xcconfig"; path = "Pods/Target Support Files/Pods-LandOfVoca/Pods-LandOfVoca.release.xcconfig"; sourceTree = "<group>"; };
 		6EA7BD77F3A06AE7F5BC8252 /* Pods-LandOfVoca.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LandOfVoca.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LandOfVoca/Pods-LandOfVoca.debug.xcconfig"; sourceTree = "<group>"; };
+		7708C96221084598009FE09E /* WordCard_Back.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCard_Back.swift; sourceTree = "<group>"; };
 		772B1C8B20E207E300483A45 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = ../../Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		772B1C9720E207F000483A45 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		772B1C9A20E7158500483A45 /* Quizz2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quizz2ViewController.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 			children = (
 				779D75652100540600EF8BE5 /* RoundButton.swift */,
 				775014852101AB3500DAB85F /* WordCard.swift */,
+				7708C96221084598009FE09E /* WordCard_Back.swift */,
 			);
 			path = UIElement;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 				774D718F20BD2D1A008ED909 /* AppDelegate.swift in Sources */,
 				772B1CA220E72B6900483A45 /* Quizz2Question.swift in Sources */,
 				779D755D20F71E6E00EF8BE5 /* MiddlePartViewController.swift in Sources */,
+				7708C96321084598009FE09E /* WordCard_Back.swift in Sources */,
 				77D867E020E1FC2D00D50672 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
