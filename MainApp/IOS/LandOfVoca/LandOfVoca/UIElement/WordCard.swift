@@ -60,9 +60,12 @@ class WordCard: UIView {
         
         // Add panGestureRecongizer
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(self.beingDragged))
-        // MARK::Add later in view controller
-        //isUserInteractionEnabled = true
         addGestureRecognizer(panGestureRecognizer)
+        
+        // Add tapGestureRecongizer
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapAction))
+        addGestureRecognizer(tapGesture)
+        
         
         // Set up Background Image
         let backGroundImageView = UIImageView(frame:bounds)
@@ -94,6 +97,13 @@ class WordCard: UIView {
         overLayImage = UIImageView(frame:bounds)
         overLayImage.alpha = 0
         addSubview(overLayImage)
+        
+    }
+    
+    @objc func tapAction() {
+        let wordBack : WordCard_Back = WordCard_Back(frame: self.frame,aWord: representedWord!,imageName: "wordback")
+        wordBack.delegate = self.delegate
+        UIView.transition(from: self, to: wordBack, duration: 0.3, options: .transitionFlipFromLeft, completion: nil)
         
     }
     

@@ -319,20 +319,20 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ikh-ib-HKj">
                                         <rect key="frame" x="288" y="-2" width="87" height="87"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" red="1" green="0.32474188370000001" blue="0.7135774506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.98778916417669116" green="1" blue="0.98977891006964469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" image="yes_btn"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4l-JB-Kqg">
                                         <rect key="frame" x="0.0" y="0.0" width="87" height="87"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" red="1" green="0.32474188370000001" blue="0.7135774506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="1" green="0.9850731298616574" blue="0.99292456057676792" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" image="no_btn"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHf-Mf-miq">
                                         <rect key="frame" x="159" y="15" width="56" height="56"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" red="1" green="0.32474188370000001" blue="0.7135774506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" image="undo_btn"/>
+                                        <color key="tintColor" red="1" green="0.97962079901851984" blue="0.99493736617729489" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="flip"/>
                                     </button>
                                 </subviews>
                             </view>
@@ -354,9 +354,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="flip" width="256" height="256"/>
         <image name="login-bg" width="250" height="375"/>
-        <image name="no_btn" width="100" height="100"/>
-        <image name="undo_btn" width="100" height="100"/>
+        <image name="no_btn" width="256" height="256"/>
         <image name="yes_btn" width="100" height="100"/>
     </resources>
 </document>

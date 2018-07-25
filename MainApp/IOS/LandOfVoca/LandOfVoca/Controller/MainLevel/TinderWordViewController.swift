@@ -30,7 +30,7 @@ class TinderWordViewController: UIViewController {
         let request : NSFetchRequest<Word> = Word.fetchRequest()
         allWord = loadWords(with:request)
         loadCards()
-        
+        addFlip()
     }
 
     override func didReceiveMemoryWarning() {
@@ -94,6 +94,7 @@ class TinderWordViewController: UIViewController {
         }
     }
     
+    
     func removeObjectAndAddNewValues() {
         
         currentLoadedCardsArray.remove(at: 0)
@@ -109,6 +110,10 @@ class TinderWordViewController: UIViewController {
         }
         print(currentIndex)
         animateCardAfterSwiping()
+    }
+    
+    func addFlip(){
+        
     }
     
 }
