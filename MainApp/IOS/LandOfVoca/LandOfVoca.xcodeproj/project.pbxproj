@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		27F2A46DD6D8C852FE288F6A /* Pods_LandOfVoca.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C6BC0C618C430DAEE4B55CB /* Pods_LandOfVoca.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		7708C96321084598009FE09E /* WordCard_Back.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7708C96221084598009FE09E /* WordCard_Back.swift */; };
 		772B1C9820E207F000483A45 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 772B1C9720E207F000483A45 /* Info.plist */; };
 		772B1C9C20E7158500483A45 /* Quizz2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772B1C9A20E7158500483A45 /* Quizz2ViewController.swift */; };
 		772B1CA220E72B6900483A45 /* Quizz2Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772B1CA120E72B6900483A45 /* Quizz2Question.swift */; };
@@ -26,6 +27,9 @@
 		779D755020F48B5C00EF8BE5 /* Overall.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 779D754F20F48B5C00EF8BE5 /* Overall.storyboard */; };
 		779D755D20F71E6E00EF8BE5 /* MiddlePartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779D755C20F71E6E00EF8BE5 /* MiddlePartViewController.swift */; };
 		779D75662100540600EF8BE5 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779D75652100540600EF8BE5 /* RoundButton.swift */; };
+		77B1C89C210AD8C10048DF90 /* WordMemoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B1C89B210AD8C10048DF90 /* WordMemoTableViewController.swift */; };
+		77B1C89F210AD97B0048DF90 /* WordMemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B1C89D210AD97B0048DF90 /* WordMemoCell.swift */; };
+		77B1C8A0210AD97B0048DF90 /* WordMemoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77B1C89E210AD97B0048DF90 /* WordMemoCell.xib */; };
 		77D867E020E1FC2D00D50672 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D867DF20E1FC2D00D50672 /* User.swift */; };
 		77D867E220E2000D00D50672 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D867E120E2000D00D50672 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
@@ -71,6 +75,7 @@
 /* Begin PBXFileReference section */
 		269C1901E2BF0023D031C9E1 /* Pods-LandOfVoca.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LandOfVoca.release.xcconfig"; path = "Pods/Target Support Files/Pods-LandOfVoca/Pods-LandOfVoca.release.xcconfig"; sourceTree = "<group>"; };
 		6EA7BD77F3A06AE7F5BC8252 /* Pods-LandOfVoca.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LandOfVoca.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LandOfVoca/Pods-LandOfVoca.debug.xcconfig"; sourceTree = "<group>"; };
+		7708C96221084598009FE09E /* WordCard_Back.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCard_Back.swift; sourceTree = "<group>"; };
 		772B1C8B20E207E300483A45 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = ../../Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		772B1C9720E207F000483A45 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		772B1C9A20E7158500483A45 /* Quizz2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quizz2ViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +97,9 @@
 		779D754F20F48B5C00EF8BE5 /* Overall.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Overall.storyboard; sourceTree = "<group>"; };
 		779D755C20F71E6E00EF8BE5 /* MiddlePartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddlePartViewController.swift; sourceTree = "<group>"; };
 		779D75652100540600EF8BE5 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		77B1C89B210AD8C10048DF90 /* WordMemoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordMemoTableViewController.swift; sourceTree = "<group>"; };
+		77B1C89D210AD97B0048DF90 /* WordMemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordMemoCell.swift; sourceTree = "<group>"; };
+		77B1C89E210AD97B0048DF90 /* WordMemoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordMemoCell.xib; sourceTree = "<group>"; };
 		77D867DF20E1FC2D00D50672 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		77D867E120E2000D00D50672 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7C6BC0C618C430DAEE4B55CB /* Pods_LandOfVoca.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LandOfVoca.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,6 +182,7 @@
 			children = (
 				779D755C20F71E6E00EF8BE5 /* MiddlePartViewController.swift */,
 				7750148C21030E0F00DAB85F /* TinderWordViewController.swift */,
+				77B1C89B210AD8C10048DF90 /* WordMemoTableViewController.swift */,
 			);
 			path = MainLevel;
 			sourceTree = "<group>";
@@ -183,6 +192,9 @@
 			children = (
 				779D75652100540600EF8BE5 /* RoundButton.swift */,
 				775014852101AB3500DAB85F /* WordCard.swift */,
+				7708C96221084598009FE09E /* WordCard_Back.swift */,
+				77B1C89D210AD97B0048DF90 /* WordMemoCell.swift */,
+				77B1C89E210AD97B0048DF90 /* WordMemoCell.xib */,
 			);
 			path = UIElement;
 			sourceTree = "<group>";
@@ -354,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7750148F2103128300DAB85F /* awsconfiguration.json in Resources */,
+				77B1C8A0210AD97B0048DF90 /* WordMemoCell.xib in Resources */,
 				779D754E20F46A9D00EF8BE5 /* toefl.csv in Resources */,
 				774D719920BD2D1B008ED909 /* LaunchScreen.storyboard in Resources */,
 				772B1CDC20EF493100483A45 /* word.csv in Resources */,
@@ -418,6 +431,7 @@
 			files = (
 				772B1C9C20E7158500483A45 /* Quizz2ViewController.swift in Sources */,
 				772B1CB620EDEC7900483A45 /* DataModel.xcdatamodeld in Sources */,
+				77B1C89F210AD97B0048DF90 /* WordMemoCell.swift in Sources */,
 				77D867E220E2000D00D50672 /* LoginViewController.swift in Sources */,
 				775014862101AB3500DAB85F /* WordCard.swift in Sources */,
 				7750148D21030E0F00DAB85F /* TinderWordViewController.swift in Sources */,
@@ -427,7 +441,9 @@
 				774D718F20BD2D1A008ED909 /* AppDelegate.swift in Sources */,
 				772B1CA220E72B6900483A45 /* Quizz2Question.swift in Sources */,
 				779D755D20F71E6E00EF8BE5 /* MiddlePartViewController.swift in Sources */,
+				7708C96321084598009FE09E /* WordCard_Back.swift in Sources */,
 				77D867E020E1FC2D00D50672 /* User.swift in Sources */,
+				77B1C89C210AD8C10048DF90 /* WordMemoTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
