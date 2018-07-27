@@ -21,7 +21,13 @@ class TinderWordViewController: UIViewController {
     var allCardsArray = [WordCard]()
     var allWord = [Word]()
     
+    //whether flipped
+    var flip = false
+    var flipView : WordCard?
+    
+    //UI
     @IBOutlet weak var cardView: UIView!
+    @IBOutlet weak var refreshButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +36,6 @@ class TinderWordViewController: UIViewController {
         let request : NSFetchRequest<Word> = Word.fetchRequest()
         allWord = loadWords(with:request)
         loadCards()
-        addFlip()
     }
 
     override func didReceiveMemoryWarning() {
@@ -81,7 +86,7 @@ class TinderWordViewController: UIViewController {
     }
     
     func animateCardAfterSwiping() {
-        
+        self.refreshButton.alpha = 1
         for (i,card) in currentLoadedCardsArray.enumerated() {
             UIView.animate(withDuration: 0.5, animations: {
                 if i == 0 {
@@ -99,6 +104,7 @@ class TinderWordViewController: UIViewController {
         
         currentLoadedCardsArray.remove(at: 0)
         currentIndex = currentIndex + 1
+        flip = false
         
         if (currentIndex + currentLoadedCardsArray.count) < allCardsArray.count {
             let card = allCardsArray[currentIndex + currentLoadedCardsArray.count]
@@ -112,23 +118,85 @@ class TinderWordViewController: UIViewController {
         animateCardAfterSwiping()
     }
     
-    func addFlip(){
+    func addToMemo(card : WordCard) {
+        let thisWord = card.representedWord!
+        let requestForMemo : NSFetchRequest<WordForMemo> = WordForMemo.fetchRequest()
+        let predicate = NSPredicate(format: "english CONTAINS[cd] %@",thisWord.english!)
+        requestForMemo.predicate = predicate
+        var wordArray : [WordForMemo]
+        do {
+            wordArray = try context.fetch(requestForMemo)
+            if (wordArray.count == 0){
+                let newMemoWord : WordForMemo = WordForMemo(context: context)
+                newMemoWord.chinese = thisWord.chinese!
+                newMemoWord.english = thisWord.english!
+            }else{
+                wordArray[0].numberOfTime += 1
+            }
+            saveContext()
+            
+        }catch{
+            print("error happens while fetching for wordmemo")
+        }
         
+    }
+    
+    func saveContext () {
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch {
+                // Replace this implementation with code to handle the error appropriately.
+                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
+        }
+    }
+    
+    @IBAction func leftButtonPressed(_ sender: Any) {
+        if(flip == true){
+            flipView?.leftAction()
+        }else{
+            currentLoadedCardsArray[0].leftAction()
+        }
+        
+    }
+    
+    @IBAction func middleButtonPressed(_ sender: Any) {
+        currentLoadedCardsArray[0].tapAction()
+        UIView.animate(withDuration: 0.5) {
+            self.refreshButton.alpha = 0
+        }
+    }
+    
+    @IBAction func rightButtonPressed(_ sender: Any) {
+        if(flip == true){
+            flipView?.rightAction()
+        }else{
+            currentLoadedCardsArray[0].rightAction()
+        }
     }
     
 }
 
 extension TinderWordViewController : WordCardDelegate{
     
-    func cardGoesLeft(card: WordCard) {
+    func beingTapped(card : WordCard) {
+        flip = true
+        flipView = card
+    }
+    
+    func cardGoesLeft(card : WordCard) {
+        removeObjectAndAddNewValues()
+        addToMemo(card: card)
+    }
+    
+    func cardGoesRight(card : WordCard) {
         removeObjectAndAddNewValues()
     }
     
-    func cardGoesRight(card: WordCard) {
-        removeObjectAndAddNewValues()
-    }
-    
-    func currentCardStatus(card: WordCard, distance: CGFloat) {
+    func currentCardStatus(card : WordCard, distance: CGFloat) {
         
     }
     

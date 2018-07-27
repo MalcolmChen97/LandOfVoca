@@ -12,6 +12,7 @@ protocol WordCardDelegate: NSObjectProtocol {
     func cardGoesLeft(card: WordCard)
     func cardGoesRight(card: WordCard)
     func currentCardStatus(card: WordCard, distance: CGFloat)
+    func beingTapped(card : WordCard)
 }
 
 class WordCard: UIView {
@@ -100,10 +101,14 @@ class WordCard: UIView {
         
     }
     
-    @objc func tapAction() {
+    @objc func tapAction()  {
         let wordBack : WordCard_Back = WordCard_Back(frame: self.frame,aWord: representedWord!,imageName: "wordback")
         wordBack.delegate = self.delegate
+        delegate?.beingTapped(card: wordBack)
+
         UIView.transition(from: self, to: wordBack, duration: 0.3, options: .transitionFlipFromLeft, completion: nil)
+        
+        
         
     }
     

@@ -32,10 +32,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             userDefaults.set(true, forKey: "loaded")
         }
         
-        
-        
-        
-        
         return true
     }
 
