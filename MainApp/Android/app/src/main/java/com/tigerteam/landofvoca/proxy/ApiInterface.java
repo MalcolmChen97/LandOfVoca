@@ -25,6 +25,12 @@ public interface ApiInterface {
     @GET("/user/login")
     Call<User> getToLogin();
 
+    @POST("/user/login")
+    Call<Boolean> login(@Body User user);
+
+    @POST("/user/register")
+    Call<Boolean> register(@Body User user);
+
 //    @POST("/users/signup")
 //    Call<User> createNewUser(@Body User user);
 //

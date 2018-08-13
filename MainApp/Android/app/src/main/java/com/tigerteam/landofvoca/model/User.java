@@ -7,21 +7,18 @@ package com.tigerteam.landofvoca.model;
 public class User {
 
 
-
-    private String userName;
+    private int id;
+    private String email;
+    private String username;
     private String password;
-    private boolean isLogin;
-
-
-
-
+    private String nickname;
     private String token;
+
     private static User instance;
 
     private User(){
-        this.userName = null;
+        this.email = null;
         this.password = null;
-        this.isLogin = false;
     }
 
     public static User getInstance(){
@@ -32,37 +29,53 @@ public class User {
     }
 
     //getter
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
     public String getPassword() {
         return password;
     }
 
-    public boolean getLogin() {
-        return isLogin;
-    }
-
     public String getToken() {
         return token;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
     //setter
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public void setPassword(String password) {
         this.password = password;
     }
 
-    public void setLogin(boolean login) {
-        isLogin = login;
-    }
-
     public void setToken(String token) {
         this.token = token;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
     }
 
 

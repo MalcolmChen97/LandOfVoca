@@ -15,14 +15,14 @@
         android:layout_marginStart="8dp"
         android:ems="10"
         android:hint="@string/password"
-        android:inputType="numberPassword"
+        android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/Login_UserName"
+        android:id="@+id/Login_Email"
         android:layout_width="283dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -30,8 +30,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="@string/user_name"
-        android:inputType="textPersonName"
+        android:hint="@string/prompt_email"
+        android:inputType="textEmailAddress"
         app:layout_constraintBottom_toTopOf="@+id/Login_UserPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
@@ -67,7 +67,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/Login_UserPassword"
         app:layout_constraintStart_toStartOf="@+id/Login_UserPassword"
-        app:layout_constraintTop_toTopOf="@+id/Login_UserName"
+        app:layout_constraintTop_toTopOf="@+id/Login_Email"
         app:layout_constraintVertical_bias="0.3" />
 
     <TextView

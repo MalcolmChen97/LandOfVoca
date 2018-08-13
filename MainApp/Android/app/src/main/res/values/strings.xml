@@ -29,5 +29,6 @@
     <string name="have_no_account_register_in">Have no account? register in</string>
     <string name="here">here</string>
     <string name="title_activity_login2">Sign in</string>
+    <string name="register">Register</string>
 
 </resources>

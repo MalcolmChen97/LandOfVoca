@@ -8,4 +8,6 @@ target :'LandOfVoca' do
     # other pods
     pod 'SwiftyJSON'
     pod 'Alamofire'
+    #UI pods
+    
 end
